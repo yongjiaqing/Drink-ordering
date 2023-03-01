@@ -1,0 +1,32 @@
+drinks = [0, 0, 0]
+price_coffee = 5.00
+price_tea = 5.00
+price_can_drink = 5.00
+discount_member = 2.00
+list = ['yes', 'YES', 'Yes', 'y', 'Y']
+
+coffee = input("Number of coffee to buy:")
+tea = input("Number of tea to buy: ")
+can_drink = input("Number of canned drink to buy:")
+membership = input("Do you have membership?:")
+
+drinks[0] = coffee
+drinks[1] = tea
+drinks[2] = can_drink
+
+total = (float(drinks[0])*price_coffee)+(float(drinks[1])*price_tea)+(float(drinks[2])*price_can_drink)
+
+if membership in list:
+    new_total = total - discount_member
+else:
+    print("Key the correct input:")
+
+
+print("Receipt")
+print("======================")
+print("Coffee:" + coffee)
+print("Tea:" + tea)
+print("Canned Drinks:" + can_drink)
+print("Total Amount:" + str(total))
+print("Membership status:" + membership)
+print("New amount:" + str(new_total))
